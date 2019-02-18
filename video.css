@@ -1,0 +1,266 @@
+
+/*{
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing: border-box;
+}*/
+*{
+	margin: 0;
+}
+
+.container {
+	width: 1000px;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+.main {
+	margin:0;
+	background: #f2f2f2;
+	font-family: "Raleway" , arial;
+	justify-content: center;
+	
+}
+
+
+.main {
+	display: grid;
+	grid-template-rows:  1fr minmax(50px, 100px) 1fr;
+	grid-template-columns: minmax(250px,300px) 1fr 1fr;	
+	grid-template-areas:
+			"playlist video video"
+			"playlist information information"
+			"playlist comments suggestions";
+}
+.playlist {
+	grid-area: playlist;
+}
+
+.video {
+	grid-area: video;
+}
+
+.information {
+	grid-area: information;
+}
+.comments {
+	grid-area: comments;
+}
+.suggestions {
+	grid-area: suggestions;
+}
+
+/************************************/
+			/*ASIDE*/
+/************************************/
+
+aside {
+	background: #181d41;
+	max-width: 300px;
+	flex-direction: column; 
+}
+
+aside h1 {
+	font-size: 40px;
+	text-align: center;
+}
+
+aside h1 .h1-1 {
+	color: white;
+
+}
+aside h1 .h1-2 {
+	color: red;
+}
+
+.my_playlist {
+	color: white;
+	margin-top: 30px;
+	padding: 0 15px;
+	text-align: left;
+}
+
+.my_playlist .mp_title {
+	padding-left: 7px;
+}
+
+.friends_playlist h4 {
+	margin-top: 30px;
+	margin-bottom: 20px;
+	padding-left: 20px;
+	color: white;
+}
+
+.friends{
+	margin-top: 30px;
+	color:white;
+	/*display: flex;*/
+	align-items: center;
+}
+
+.friends_playlist .friend {
+	color: white;
+	text-decoration: none;
+	display: flex;
+	padding:10px;
+	align-items: center;
+	justify-content: left;
+	padding-left: 30px;
+}
+
+.friend img {
+	border-radius: 50%;
+	border: 2px solid red;
+	width: 50px;
+	height: 50px;
+}
+
+.friend span {
+	padding-left: 10px;
+}
+
+
+/************************************/
+			/*VIDEO*/
+/************************************/
+.video {
+	width: 100%;
+}
+
+/************************************/
+		/*INFORMATION*/
+/************************************/
+.information_videoname {
+	margin-left: 20px;
+	padding-bottom: 10px;
+}
+.information_videoname .namevideo {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.information_videoname .videocounts {
+	font-size: 14px;
+	font-weight: lighter;
+}
+
+.information_videotags {
+	display: flex;
+	justify-content: space-between;
+}
+
+.information_safe {
+	display: flex;
+}
+
+.information_tag {
+	align-content: space-between;
+	display: flex;	
+}
+
+.icontags {
+	align-items: center;
+	padding: 0 20px;
+	text-align: center;
+}
+
+ .information_videotags .btn {
+	font-size: 12px;
+	padding: 10px 15px;
+	margin: 0 5px;
+	background-color:#f9a03f;
+	border-radius: 20px;
+	color: white;
+	/*width: 60px;*/
+	min-width: 45px;
+	text-align: center;
+}
+
+ .information_videotags .btn.red {
+ 	background:#d84727;
+ }
+
+  .information_videotags .btn.lightblue {
+ 	background:#3e7cb1;
+ }
+
+  .information_videotags .btn.orange {
+ 	background:#ef7b45;
+ }
+
+  .information_videotags .btn.green {
+ 	background:#5eb1bf;
+ }
+/*.information_videotags .information_tag .btn .red {
+	background-color: red;
+}*/
+
+/************************************/
+		/*COMMNENTS*/
+/************************************/
+.comments {
+	align-items: center;
+}
+
+.comments h3 {
+	padding: 20px;
+}
+
+.comments .friend_comments{
+	color: #585858;
+	text-decoration: none;
+	display: flex;
+	padding:10px;
+	align-items: center;
+	justify-content: left;
+	padding-left: 30px;
+}
+
+.comments .friend_comments input {
+	margin:0;
+	background: lightgray;
+	padding: 10px;
+	border: 0;
+	height: 30px;
+	width: 100%;
+	font-size: 16px;
+	border-radius: 5px;
+	bo
+}
+
+.friend_comments img {
+	border-radius: 50%;
+	border: 2px solid red;
+	width: 50px;
+	height: 50px;
+} 
+.personal_comment {
+	font-size: 16px;
+	margin-left: 10px;
+}
+.personal_comment span{
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+
+
+
+/************************************/
+		/*SUGGESTIONS*/
+/************************************/
+
+.suggestions {
+	align-items: center;
+}
+
+.suggestions h3 {
+	padding: 20px;
+}
+
+.suggestions iframe {
+	padding-left: 25px;
+}
+
+.suggestions figcaption {
+	text-align: center;
+}
